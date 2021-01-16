@@ -5,11 +5,15 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { UserListComponent } from './feature/user/user-list/user-list.component';
+import { UserCreateComponent } from './feature/user/user-create/user-create.component';
+import { UserDetailComponent } from './feature/user/user-detail/user-detail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    UserListComponent
+    UserListComponent,
+    UserCreateComponent,
+    UserDetailComponent
   ],
   imports: [
     BrowserModule,

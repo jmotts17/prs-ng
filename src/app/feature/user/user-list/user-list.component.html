@@ -13,13 +13,13 @@
     <tbody>
         <tr *ngFor='let user of users'>
             <td>{{user.id}}</td>
-            <td>{{user.username}}</td>
+            <td>{{user.userName}}</td>
             <td>{{user.password}}</td>
             <td>{{user.firstName}} {{user.lastName}}</td>
             <td>{{user.phoneNumber}}</td>
             <td>{{user.email}}</td>
-            <td>{{user.isReviewer ? "True" : "False"}}</td>
-            <td>{{user.isAdmin ? "True" : "False"}}</td>
+            <td>{{user.reviewer ? "True" : "False"}}</td>
+            <td>{{user.admin ? "True" : "False"}}</td>
             <td>Detail | Edit</td>
             <!-- <td><a routerLink='/user-detail/{{user.id}}'>
                 <img width='20' height='20' src='assets/details.png' title='User Details'>
