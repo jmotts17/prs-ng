@@ -1,3 +1,4 @@
+<app-menu></app-menu>
 <section class="heading">
     <span class="page-title font-weight-bold font-italic">[{{title}}]</span>
     <a routerLink='/user-create'>
@@ -18,8 +19,8 @@
             <td>{{user.firstName}} {{user.lastName}}</td>
             <td>{{user.phoneNumber}}</td>
             <td>{{user.email}}</td>
-            <td>{{user.reviewer ? "True" : "False"}}</td>
-            <td>{{user.admin ? "True" : "False"}}</td>
+            <td><input [(ngModel)]="user.reviewer" class="rounded" type="checkbox" disabled></td>
+            <td><input [(ngModel)]="user.admin" class="rounded" type="checkbox" disabled></td>
             <td><a routerLink='/user-detail/{{user.id}}'>
                 <img width='20' height='20' src='assets/details.png' title='User Details'></a>
             | <a routerLink='/user-edit/{{user.id}}'>

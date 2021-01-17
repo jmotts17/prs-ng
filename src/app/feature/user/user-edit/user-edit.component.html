@@ -1,3 +1,4 @@
+<app-menu></app-menu>
 <section class="heading">
     <span class='component-title'>[{{title}}]</span>
   </section>
@@ -56,7 +57,7 @@
             Reviewer:
         </td>
         <td>
-            <input [(ngModel)]="user.isReviewer" class="rounded" type="checkbox">
+            <input [(ngModel)]="user.reviewer" class="rounded" type="checkbox">
         </td>
       </tr>
       <tr>
@@ -64,7 +65,7 @@
             Admin:
         </td>
         <td>
-            <input [(ngModel)]="user.isAdmin" class="rounded" type="checkbox">
+            <input [(ngModel)]="user.admin" class="rounded" type="checkbox">
         </td>
       </tr>
     </table>
