@@ -11,6 +11,7 @@ import { UserEditComponent } from './feature/user/user-edit/user-edit.component'
 import { MenuComponent } from './core/menu/menu.component';
 import { VendorListComponent } from './feature/vendor/vendor-list/vendor-list.component';
 import { VendorDetailComponent } from './feature/vendor/vendor-detail/vendor-detail.component';
+import { VendorCreateComponent } from './feature/vendor/vendor-create/vendor-create.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { VendorDetailComponent } from './feature/vendor/vendor-detail/vendor-det
     UserEditComponent,
     MenuComponent,
     VendorListComponent,
-    VendorDetailComponent
+    VendorDetailComponent,
+    VendorCreateComponent
   ],
   imports: [
     BrowserModule,
