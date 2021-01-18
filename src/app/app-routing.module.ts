@@ -7,6 +7,7 @@ import { UserEditComponent } from './feature/user/user-edit/user-edit.component'
 import { VendorListComponent } from './feature/vendor/vendor-list/vendor-list.component';
 import { VendorCreateComponent } from './feature/vendor/vendor-create/vendor-create.component';
 import { VendorDetailComponent } from './feature/vendor/vendor-detail/vendor-detail.component';
+import { VendorEditComponent } from './feature/vendor/vendor-edit/vendor-edit.component';
 
 const routes: Routes = [
   { path: "user-list", component: UserListComponent },
@@ -15,7 +16,8 @@ const routes: Routes = [
   { path: "user-edit/:id", component: UserEditComponent },
   { path: "vendor-list", component: VendorListComponent },
   { path: "vendor-create", component: VendorCreateComponent },
-  { path: "vendor-detail/:id", component: VendorDetailComponent }
+  { path: "vendor-detail/:id", component: VendorDetailComponent },
+  { path: "vendor-edit/:id", component: VendorEditComponent }
 ];
 
 @NgModule({

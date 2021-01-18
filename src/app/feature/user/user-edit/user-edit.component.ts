@@ -24,15 +24,15 @@ export class UserEditComponent implements OnInit {
       parms => {
         this.userId = parms['id'];
       });
-      // get user id
-      this.userSvc.getById(this.userId).subscribe(
-        resp => {
-          this.user = resp as User;
-        },
-        err => {
-          console.log(err);
-        }
-      );
+    // get user id
+    this.userSvc.getById(this.userId).subscribe(
+      resp => {
+        this.user = resp as User;
+      },
+      err => {
+        console.log(err);
+      }
+    );
   }
 
   save() {
