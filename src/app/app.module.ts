@@ -9,6 +9,8 @@ import { UserCreateComponent } from './feature/user/user-create/user-create.comp
 import { UserDetailComponent } from './feature/user/user-detail/user-detail.component';
 import { UserEditComponent } from './feature/user/user-edit/user-edit.component';
 import { MenuComponent } from './core/menu/menu.component';
+import { VendorListComponent } from './feature/vendor/vendor-list/vendor-list.component';
+import { VendorDetailComponent } from './feature/vendor/vendor-detail/vendor-detail.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { MenuComponent } from './core/menu/menu.component';
     UserCreateComponent,
     UserDetailComponent,
     UserEditComponent,
-    MenuComponent
+    MenuComponent,
+    VendorListComponent,
+    VendorDetailComponent
   ],
   imports: [
     BrowserModule,
