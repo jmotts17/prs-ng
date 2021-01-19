@@ -1,7 +1,7 @@
 <app-menu></app-menu>
 <section class="heading">
     <span class="page-title font-weight-bold font-italic">[{{title}}]</span>
-    <a routerLink='/vendor-create'>
+    <a routerLink='/product-create'>
         <img width='20' height='20' src='assets/add-icon.png' title='Add New'>
     </a>
 </section>
@@ -17,11 +17,10 @@
             <td>{{product.name}}</td>
             <td>{{product.vendor.name}}</td>
             <td>{{product.price}}</td>
-            <td>Detail | Edit</td>
-            <!-- <td><a routerLink='/vendor-detail/{{vendor.id}}'>
-                <img width='20' height='20' src='assets/details.png' title='Vendor Details'></a>
-            | <a routerLink='/vendor-edit/{{vendor.id}}'>
-              <img width='20' height='20' src='assets/pencil-icon.png' title='Vendor Edit'></a></td> -->
+            <td><a routerLink='/product-detail/{{product.id}}'>
+                <img width='20' height='20' src='assets/details.png' title='Product Details'></a> 
+            | <a routerLink='/product-edit/{{product.id}}'>
+              <img width='20' height='20' src='assets/pencil-icon.png' title='Product Edit'></a></td>
         </tr>
     </tbody>
 </table>
