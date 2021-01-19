@@ -14,6 +14,7 @@ import { VendorDetailComponent } from './feature/vendor/vendor-detail/vendor-det
 import { VendorCreateComponent } from './feature/vendor/vendor-create/vendor-create.component';
 import { VendorEditComponent } from './feature/vendor/vendor-edit/vendor-edit.component';
 import { UserLoginComponent } from './feature/user/user-login/user-login.component';
+import { ProductListComponent } from './feature/product/product-list/product-list.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { UserLoginComponent } from './feature/user/user-login/user-login.compone
     VendorDetailComponent,
     VendorCreateComponent,
     VendorEditComponent,
-    UserLoginComponent
+    UserLoginComponent,
+    ProductListComponent
   ],
   imports: [
     BrowserModule,

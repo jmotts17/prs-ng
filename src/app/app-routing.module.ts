@@ -9,6 +9,7 @@ import { VendorListComponent } from './feature/vendor/vendor-list/vendor-list.co
 import { VendorCreateComponent } from './feature/vendor/vendor-create/vendor-create.component';
 import { VendorDetailComponent } from './feature/vendor/vendor-detail/vendor-detail.component';
 import { VendorEditComponent } from './feature/vendor/vendor-edit/vendor-edit.component';
+import { ProductListComponent } from './feature/product/product-list/product-list.component';
 
 const routes: Routes = [
   { path: "user-list", component: UserListComponent },
@@ -19,7 +20,8 @@ const routes: Routes = [
   { path: "vendor-list", component: VendorListComponent },
   { path: "vendor-create", component: VendorCreateComponent },
   { path: "vendor-detail/:id", component: VendorDetailComponent },
-  { path: "vendor-edit/:id", component: VendorEditComponent }
+  { path: "vendor-edit/:id", component: VendorEditComponent },
+  { path: "product-list", component: ProductListComponent}
 ];
 
 @NgModule({
