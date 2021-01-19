@@ -10,6 +10,7 @@ export class MenuComponent implements OnInit {
   menuItems : MenuItem[] = [
     new MenuItem("User", "/user-list", "User List"),
     new MenuItem("Vendor", "/vendor-list", "Vendor List"),
+    new MenuItem("Login", "/user-login", "User Login")
   ];
 
   constructor() { }
