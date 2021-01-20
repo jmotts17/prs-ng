@@ -1,0 +1,29 @@
+<app-menu></app-menu>
+<section class="heading">
+    <span class="page-title font-weight-bold font-italic">[{{title}}]</span>
+    <!-- <a routerLink='/product-create'>
+        <img width='20' height='20' src='assets/add-icon.png' title='Add New'>
+    </a> -->
+</section>
+<table class="table table-sm table-striped">
+    <thead>
+        <tr>
+            <th>ID</th><th>User</th><th>Description</th><th>Date Needed</th><th>Status</th><th>Submitted Date</th><th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor='let request of requests'>
+            <td>{{request.id}}</td>
+            <td>{{request.user.lastName + ", " + request.user.firstName}}</td>
+            <td>{{request.description}}</td>
+            <td>{{request.dateNeeded}}</td>
+            <td>{{request.status}}</td>
+            <td>{{request.submittedDate}}</td>
+            <td>Detail | Edit</td>
+            <!-- <td><a routerLink='/product-detail/{{product.id}}'>
+                <img width='20' height='20' src='assets/details.png' title='Product Details'></a> 
+            | <a routerLink='/product-edit/{{product.id}}'>
+              <img width='20' height='20' src='assets/pencil-icon.png' title='Product Edit'></a></td> -->
+        </tr>
+    </tbody>
+</table>

@@ -13,6 +13,7 @@ import { ProductListComponent } from './feature/product/product-list/product-lis
 import { ProductCreateComponent } from './feature/product/product-create/product-create.component';
 import { ProductDetailComponent } from './feature/product/product-detail/product-detail.component';
 import { ProductEditComponent } from './feature/product/product-edit/product-edit.component';
+import { RequestListComponent } from './feature/request/request-list/request-list.component';
 
 const routes: Routes = [
   { path: "user-list", component: UserListComponent },
@@ -27,7 +28,8 @@ const routes: Routes = [
   { path: "product-list", component: ProductListComponent},
   { path: "product-create", component: ProductCreateComponent},
   { path: "product-detail/:id", component: ProductDetailComponent},
-  { path: "product-edit/:id", component: ProductEditComponent}
+  { path: "product-edit/:id", component: ProductEditComponent},
+  { path: "request-list", component: RequestListComponent}
 ];
 
 @NgModule({
