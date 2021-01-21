@@ -1,9 +1,9 @@
 <app-menu></app-menu>
 <section class="heading">
     <span class="page-title font-weight-bold font-italic">[{{title}}]</span>
-    <!-- <a routerLink='/product-create'>
+    <a routerLink='/request-create'>
         <img width='20' height='20' src='assets/add-icon.png' title='Add New'>
-    </a> -->
+    </a>
 </section>
 <table class="table table-sm table-striped">
     <thead>
@@ -20,8 +20,8 @@
             <td>{{request.status}}</td>
             <td>{{request.submittedDate}}</td>
             <td>Detail | Edit</td>
-            <!-- <td><a routerLink='/product-detail/{{product.id}}'>
-                <img width='20' height='20' src='assets/details.png' title='Product Details'></a> 
+            <!-- <td><a routerLink='/request-detail/{{request.id}}'>
+                <img width='20' height='20' src='assets/details.png' title='Request Details'></a> | edit </td>
             | <a routerLink='/product-edit/{{product.id}}'>
               <img width='20' height='20' src='assets/pencil-icon.png' title='Product Edit'></a></td> -->
         </tr>

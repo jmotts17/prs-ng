@@ -14,8 +14,11 @@ import { ProductCreateComponent } from './feature/product/product-create/product
 import { ProductDetailComponent } from './feature/product/product-detail/product-detail.component';
 import { ProductEditComponent } from './feature/product/product-edit/product-edit.component';
 import { RequestListComponent } from './feature/request/request-list/request-list.component';
+import { RequestDetailComponent } from './feature/request/request-detail/request-detail.component';
+import { RequestCreateComponent } from './feature/request/request-create/request-create.component';
 
 const routes: Routes = [
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: "user-list", component: UserListComponent },
   { path: "user-create", component: UserCreateComponent },
   { path: "user-detail/:id", component: UserDetailComponent },
@@ -29,7 +32,9 @@ const routes: Routes = [
   { path: "product-create", component: ProductCreateComponent},
   { path: "product-detail/:id", component: ProductDetailComponent},
   { path: "product-edit/:id", component: ProductEditComponent},
-  { path: "request-list", component: RequestListComponent}
+  { path: "request-list", component: RequestListComponent},
+  { path: "request-create", component: RequestCreateComponent},
+  { path: "request-detail:/id", component: RequestDetailComponent}
 ];
 
 @NgModule({
