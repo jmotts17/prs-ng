@@ -19,11 +19,10 @@
             <td>{{request.dateNeeded}}</td>
             <td>{{request.status}}</td>
             <td>{{request.submittedDate}}</td>
-            <td>Detail | Edit</td>
-            <!-- <td><a routerLink='/request-detail/{{request.id}}'>
-                <img width='20' height='20' src='assets/details.png' title='Request Details'></a> | edit </td>
-            | <a routerLink='/product-edit/{{product.id}}'>
-              <img width='20' height='20' src='assets/pencil-icon.png' title='Product Edit'></a></td> -->
+            <td><a routerLink='/request-detail/{{request.id}}'>
+                <img width='20' height='20' src='assets/details.png' title='Request Details'></a>
+            | <a routerLink='/request-edit/{{request.id}}'>
+              <img width='20' height='20' src='assets/pencil-icon.png' title='Request Edit'></a></td>
         </tr>
     </tbody>
 </table>

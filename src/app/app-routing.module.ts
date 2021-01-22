@@ -16,6 +16,7 @@ import { ProductEditComponent } from './feature/product/product-edit/product-edi
 import { RequestListComponent } from './feature/request/request-list/request-list.component';
 import { RequestDetailComponent } from './feature/request/request-detail/request-detail.component';
 import { RequestCreateComponent } from './feature/request/request-create/request-create.component';
+import { RequestEditComponent } from './feature/request/request-edit/request-edit.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -34,7 +35,8 @@ const routes: Routes = [
   { path: "product-edit/:id", component: ProductEditComponent},
   { path: "request-list", component: RequestListComponent},
   { path: "request-create", component: RequestCreateComponent},
-  { path: "request-detail:/id", component: RequestDetailComponent}
+  { path: "request-detail/:id", component: RequestDetailComponent},
+  { path: "request-edit/:id", component: RequestEditComponent}
 ];
 
 @NgModule({
