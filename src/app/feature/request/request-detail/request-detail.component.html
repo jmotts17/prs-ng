@@ -1,42 +1,54 @@
-<!-- <app-menu></app-menu>
+<app-menu></app-menu>
 <div class="component">
     <section class="heading">
         <span class="page-title font-weight-bold font-italic">{{title}}</span>
-        <span>&nbsp;<a routerLink="/product-list">Return to List</a></span>
+        <span>&nbsp;<a routerLink="/request-list">Return to List</a></span>
     </section>
-    <main *ngIf='product' class="single">
+    <main *ngIf='request' class="single">
         <table class="table table-sm">
             <tr>
                 <td>ID</td>
-                <td>{{product.id}}</td>
+                <td>{{request.id}}</td>
             </tr>
             <tr>
-                <td>Vendor:</td>
-                <td><input [(ngModel)]="product.vendor.name" class="rounded" type="text" disabled></td>
+                <td>User:</td>
+                <td><input [(ngModel)]="request.user.userName" class="rounded" type="text" disabled></td>
             </tr>
             <tr>
-                <td>Part Number:</td>
-                <td><input [(ngModel)]="product.partNumber" class="rounded" type="text" disabled></td>
+                <td>Description:</td>
+                <td><input [(ngModel)]="request.description" class="rounded" type="text" disabled></td>
             </tr>
             <tr>
-                <td>Name:</td>
-                <td><input [(ngModel)]="product.name" class="rounded" type="text" disabled></td>
+                <td>Justification:</td>
+                <td><input [(ngModel)]="request.justification" class="rounded" type="text" disabled></td>
             </tr>
             <tr>
-                <td>Price:</td>
-                <td><input [(ngModel)]="product.price" class="rounded" type="text" disabled></td>
+                <td>Date Needed:</td>
+                <td><input [(ngModel)]="request.dateNeeded" class="rounded" type="text" disabled></td>
             </tr>
             <tr>
-                <td>Unit:</td>
-                <td><input [(ngModel)]="product.unit" class="rounded" type="text" disabled></td>
+                <td>Delivery Mode:</td>
+                <td><input [(ngModel)]="request.deliveryMode" class="rounded" type="text" disabled></td>
             </tr>
             <tr>
-                <td>Photo Path:</td>
-                <td><input [(ngModel)]="product.photoPath" class="rounded" type="text" disabled></td>
+                <td>Status:</td>
+                <td><input [(ngModel)]="request.status" class="rounded" type="text" disabled></td>
+            </tr>
+            <tr>
+                <td>Total:</td>
+                <td><input [(ngModel)]="request.total" class="rounded" type="text" disabled></td>
+            </tr>
+            <tr>
+                <td>Submitted Date:</td>
+                <td><input [(ngModel)]="request.submittedDate" class="rounded" type="text" disabled></td>
+            </tr>
+            <tr>
+                <td>Reason for Rejection:</td>
+                <td><input [(ngModel)]="request.reasonForRejection" class="rounded" type="text" disabled></td>
             </tr>
         </table>
     </main>
     <span>
         <span>&nbsp;<button (click)="delete()" class="btn btn-sm btn-danger">Delete</button></span>
     </span>
-</div> -->
+</div>

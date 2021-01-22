@@ -17,7 +17,7 @@ export class RequestDetailComponent implements OnInit {
               private router: Router,
               private route: ActivatedRoute) { }
 
-  ngOnInit(): void {
+  ngOnInit(): void {    
     // get the id from the url
     this.route.params.subscribe(
       parms => {

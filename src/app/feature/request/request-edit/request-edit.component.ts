@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Request } from 'src/app/model/request.class';
-import { User } from 'src/app/model/user.class';
 import { RequestService } from 'src/app/service/request.service';
 import { SystemService } from 'src/app/service/system.service';
 
@@ -15,8 +14,6 @@ export class RequestEditComponent implements OnInit {
   submitBtnTitle = "Save";
   requestId: number = 0;
   request: Request = new Request();
-  user: User = new User();
-
 
   constructor(private requestSvc: RequestService,
               private sysSvc: SystemService,

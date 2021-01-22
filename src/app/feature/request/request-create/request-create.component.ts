@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Request } from 'src/app/model/request.class';
-import { User } from 'src/app/model/user.class';
 import { RequestService } from 'src/app/service/request.service';
 import { SystemService } from 'src/app/service/system.service';
 
@@ -14,7 +13,6 @@ export class RequestCreateComponent implements OnInit {
   title = "Request Create";
   submitBtnTitle = "Create";
   request: Request = new Request();
-  user: User = new User();
 
   constructor(private requestSvc: RequestService,
               private sysSvc: SystemService,
