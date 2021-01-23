@@ -33,9 +33,11 @@
             Delivery Mode:
         </td>
         <td>
-            <input [(ngModel)]="request.deliveryMode" class="rounded" type="text">
+            <select [(ngModel)]="request.deliveryMode" class="rounded">
+              <option value="Pick Up">Pick Up</option>
+              <option value="Mail">Mail</option>
+            </select> 
         </td>
-      </tr>
     </table>
   </main>
   <span><button (click)="save()" class="btn btn-sm btn-primary">{{submitBtnTitle}}</button></span> |
