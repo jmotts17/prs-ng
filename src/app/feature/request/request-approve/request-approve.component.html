@@ -21,36 +21,23 @@
 
 <section *ngIf='request' class="heading">
     <span class="page-title font-weight-bold font-italic">[{{linesTitle}}]</span>
-    <a routerLink='/line-item-create/{{request.id}}'>
-        <img width='20' height='20' src='assets/add-icon.png' title='Add New'>
-    </a>
 </section>
 <table class="table table-sm table-striped">
     <thead>
         <tr>
-            <th>ID</th><th>Product</th><th>Quantity</th><th>Price</th><th>Line Total</th><th>Action</th>
+            <th>ID</th><th>Product</th><th>Quantity</th><th>Price</th><th>Line Total</th>
         </tr>
     </thead>
     <tbody>
-        <tr [hidden]="isHidden" *ngFor='let lineItem of lineItems'>
+        <tr *ngFor='let lineItem of lineItems'>
             <td>{{lineItem.id}}</td>
             <td>{{lineItem.product.name}}</td>
             <td>{{lineItem.quantity}}</td>
             <td>${{lineItem.product.price}}</td>
             <td>${{lineItem.quantity * lineItem.product.price}}</td>
-            <td><a routerLink='/line-item-edit/{{lineItem.id}}'>
-                <img width='20' height='20' src='assets/pencil-icon.png' title='Line Item Edit'></a>            
-                <a style="cursor: pointer"><img width='20' height='20' src='assets/delete.jpg' title='Line Item Delete' (click)="delete(lineItem.id)"></a>
-            </td>
         </tr>
-        <button class="btn btn-primary" [hidden]="isHidden" (click)="submit()">Submit for Review</button>
-        <tr [hidden]="!isHidden">
-            <td class="table-danger">No Line Items yet. Please create a new one!</td>
-            <td class="table-danger"></td>
-            <td class="table-danger"></td>
-            <td class="table-danger"></td>
-            <td class="table-danger"></td>
-            <td class="table-danger"></td>
-        </tr>
+        <button class="btn btn-primary" (click)="approve()">Approve</button>
+        <input *ngIf="request" [(ngModel)]="request.reasonForRejection" class="rounded" type="text" placeholder="Reason for Rejection">
+        <button class="btn btn-danger" (click)="reject()">Reject</button>
     </tbody>
 </table>

@@ -15,7 +15,8 @@
             <td>{{request.description}}</td>
             <td>{{request.status}}</td>
             <td>{{request.total}}</td>
-            <td>Action</td>
+            <td><a routerLink='/request-approve/{{request.id}}'>
+                <img width='20' height='20' src='assets/review.png' title='Request Approve'></a></td>
         </tr>
     </tbody>
 </table>
