@@ -42,4 +42,9 @@ export class RequestService {
     return this.http.put(URL+'/submit-review', request) as Observable<Request>;
   }
 
+  // get all requests in review status and not assigned to logged in user
+  review(id) : Observable<Request[]> {
+    return this.http.get(URL+'/list-review/'+id) as Observable<Request[]>;
+  }
+  
 }
