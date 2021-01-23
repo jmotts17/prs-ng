@@ -17,6 +17,7 @@ import { RequestListComponent } from './feature/request/request-list/request-lis
 import { RequestDetailComponent } from './feature/request/request-detail/request-detail.component';
 import { RequestCreateComponent } from './feature/request/request-create/request-create.component';
 import { RequestEditComponent } from './feature/request/request-edit/request-edit.component';
+import { NoComponentDefinedComponent } from './core/no-component-defined/no-component-defined.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -36,7 +37,8 @@ const routes: Routes = [
   { path: "request-list", component: RequestListComponent},
   { path: "request-create", component: RequestCreateComponent},
   { path: "request-detail/:id", component: RequestDetailComponent},
-  { path: "request-edit/:id", component: RequestEditComponent}
+  { path: "request-edit/:id", component: RequestEditComponent},
+  { path: "**", component: NoComponentDefinedComponent}
 ];
 
 @NgModule({
