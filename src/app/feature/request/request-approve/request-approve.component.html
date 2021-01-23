@@ -36,8 +36,10 @@
             <td>${{lineItem.product.price}}</td>
             <td>${{lineItem.quantity * lineItem.product.price}}</td>
         </tr>
-        <button class="btn btn-primary" (click)="approve()">Approve</button>
-        <input *ngIf="request" [(ngModel)]="request.reasonForRejection" class="rounded" type="text" placeholder="Reason for Rejection">
-        <button class="btn btn-danger" (click)="reject()">Reject</button>
+        <button class="btn btn-primary" (click)="approve()">{{approveBtn}}</button>
+        <span *ngIf="request">
+            <input [(ngModel)]="request.reasonForRejection" class="rounded" type="text" placeholder="Reason for Rejection">
+            <span *ngIf="request.reasonForRejection"><button class="btn btn-sm btn-danger" (click)="reject()">{{rejectBtn}}</button></span>
+        </span>
     </tbody>
 </table>
