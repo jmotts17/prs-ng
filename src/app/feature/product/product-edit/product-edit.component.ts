@@ -51,10 +51,9 @@ export class ProductEditComponent implements OnInit {
 
   save() {
     // save the product to the DB
-    this.productSvc.create(this.product).subscribe(
+    this.productSvc.update(this.product).subscribe(
       resp => {
         this.product = resp as Product;
-        console.log("Product created", this.product);
         // forward to the product list component
         this.router.navigateByUrl("/product-list");
       },

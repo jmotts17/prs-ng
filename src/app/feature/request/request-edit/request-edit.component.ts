@@ -40,7 +40,7 @@ export class RequestEditComponent implements OnInit {
 
   save() {
     // save the request to the DB
-    this.requestSvc.create(this.request).subscribe(
+    this.requestSvc.update(this.request).subscribe(
       resp => {
         this.request = resp as Request;
         // forward to the request list component

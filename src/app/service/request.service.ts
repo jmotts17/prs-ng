@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, ObservableLike } from 'rxjs';
 import { Request } from '../model/request.class';
 
 const URL = "http://localhost:8080/requests";
@@ -35,6 +35,11 @@ export class RequestService {
   // delete request
   delete(id) : Observable<Request> {
     return this.http.delete(URL+'/'+id) as Observable<Request>;
+  }
+
+  // submit for review
+  submit(request: Request) : Observable<Request> {
+    return this.http.put(URL+'/submit-review', request) as Observable<Request>;
   }
 
 }

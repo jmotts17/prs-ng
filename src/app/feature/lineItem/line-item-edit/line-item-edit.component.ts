@@ -52,7 +52,7 @@ export class LineItemEditComponent implements OnInit {
 
   save() {
     // save the lineItem to the DB
-    this.lineItemSvc.create(this.lineItem).subscribe(
+    this.lineItemSvc.update(this.lineItem).subscribe(
       resp => {
         this.lineItem = resp as LineItem;
         // forward to the product list component

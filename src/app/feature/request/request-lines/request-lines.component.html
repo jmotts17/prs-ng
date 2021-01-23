@@ -43,6 +43,7 @@
                 <img width='20' height='20' src='assets/delete.jpg' title='Line Item Delete' (click)="delete(lineItem.id)" style="cursor: pointer">
             </td>
         </tr>
+        <button class="btn btn-primary" [hidden]="isHidden" (click)="submit()">Submit for Review</button>
         <tr [hidden]="!isHidden">
             <td class="table-danger">No Line Items yet. Please create a new one!</td>
             <td class="table-danger"></td>

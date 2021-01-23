@@ -69,4 +69,17 @@ export class RequestLinesComponent implements OnInit {
     );
   }
 
+  submit() {
+    this.requestSvc.submit(this.request).subscribe(
+      resp => {
+        this.request = resp as Request;
+        // forward to the request list component
+        this.router.navigateByUrl("/request-list");
+      },
+      err => {
+        console.log(err);
+      }
+    );
+  }
+
 }
