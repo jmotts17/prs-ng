@@ -1,6 +1,7 @@
 <app-menu></app-menu>
 <section class="heading">
     <span class="page-title font-weight-bold font-italic">[{{requestTitle}}]</span>
+    <span>&nbsp;<a routerLink="/request-list">Return to List</a></span>
 </section>
 <table *ngIf='request' class="table table-sm table-striped">
     <thead>
@@ -31,13 +32,21 @@
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor='let lineItem of lineItems'>
+        <tr [hidden]="isHidden" *ngFor='let lineItem of lineItems'>
             <td>{{lineItem.id}}</td>
             <td>{{lineItem.product.name}}</td>
             <td>{{lineItem.quantity}}</td>
             <td>${{lineItem.product.price}}</td>
             <td>${{lineItem.quantity * lineItem.product.price}}</td>
             <td>Action</td>
+        </tr>
+        <tr [hidden]="!isHidden">
+            <td class="table-danger">No Line Items yet. Please create a new one!</td>
+            <td class="table-danger"></td>
+            <td class="table-danger"></td>
+            <td class="table-danger"></td>
+            <td class="table-danger"></td>
+            <td class="table-danger"></td>
         </tr>
     </tbody>
 </table>

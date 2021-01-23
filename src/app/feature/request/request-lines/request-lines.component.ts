@@ -15,6 +15,7 @@ export class RequestLinesComponent implements OnInit {
   linesTitle = "Lines";
   request: Request = null;
   lineItems: LineItem[] = [];
+  isHidden = false;
   requestId = 0;
 
   constructor(private lineItemSvc: LineItemService,
@@ -43,6 +44,9 @@ export class RequestLinesComponent implements OnInit {
     this.lineItemSvc.getLineItemsByRequestId(this.requestId).subscribe(
       resp => {
         this.lineItems = resp as LineItem[];
+        if(this.lineItems.length === 0) {
+          this.isHidden = true;
+        }
       },
       err => {
         console.log(err);
