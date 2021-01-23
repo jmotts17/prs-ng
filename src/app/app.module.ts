@@ -23,6 +23,7 @@ import { RequestDetailComponent } from './feature/request/request-detail/request
 import { RequestCreateComponent } from './feature/request/request-create/request-create.component';
 import { RequestEditComponent } from './feature/request/request-edit/request-edit.component';
 import { NoComponentDefinedComponent } from './core/no-component-defined/no-component-defined.component';
+import { RequestLinesComponent } from './feature/request/request-lines/request-lines.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +46,8 @@ import { NoComponentDefinedComponent } from './core/no-component-defined/no-comp
     RequestDetailComponent,
     RequestCreateComponent,
     RequestEditComponent,
-    NoComponentDefinedComponent
+    NoComponentDefinedComponent,
+    RequestLinesComponent
   ],
   imports: [
     BrowserModule,

@@ -36,4 +36,5 @@ export class RequestService {
   delete(id) : Observable<Request> {
     return this.http.delete(URL+'/'+id) as Observable<Request>;
   }
+
 }
