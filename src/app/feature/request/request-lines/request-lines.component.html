@@ -38,7 +38,8 @@
             <td>{{lineItem.quantity}}</td>
             <td>${{lineItem.product.price}}</td>
             <td>${{lineItem.quantity * lineItem.product.price}}</td>
-            <td>Action</td>
+            <td><a routerLink='/line-item-edit/{{lineItem.id}}'>
+                <img width='20' height='20' src='assets/pencil-icon.png' title='Line Item Edit'></a></td>
         </tr>
         <tr [hidden]="!isHidden">
             <td class="table-danger">No Line Items yet. Please create a new one!</td>

@@ -20,6 +20,7 @@ import { RequestEditComponent } from './feature/request/request-edit/request-edi
 import { RequestLinesComponent } from './feature/request/request-lines/request-lines.component';
 import { LineItemCreateComponent } from './feature/lineItem/line-item-create/line-item-create.component';
 import { NoComponentDefinedComponent } from './core/no-component-defined/no-component-defined.component';
+import { LineItemEditComponent } from './feature/lineItem/line-item-edit/line-item-edit.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -42,6 +43,7 @@ const routes: Routes = [
   { path: "request-edit/:id", component: RequestEditComponent},
   { path: "request-lines/:id", component: RequestLinesComponent},
   { path: "line-item-create/:id", component: LineItemCreateComponent},
+  { path: "line-item-edit/:id", component: LineItemEditComponent},
   { path: "**", component: NoComponentDefinedComponent}
 ];
 
