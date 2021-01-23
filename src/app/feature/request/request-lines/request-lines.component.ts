@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { LineItem } from 'src/app/model/line-item.class';
 import { LineItemService } from '../../../service/line-item.service';
 import { Request } from 'src/app/model/request.class';
@@ -15,11 +15,13 @@ export class RequestLinesComponent implements OnInit {
   linesTitle = "Lines";
   request: Request = null;
   lineItems: LineItem[] = [];
+  lineItem: LineItem = new LineItem();
   isHidden = false;
   requestId = 0;
 
   constructor(private lineItemSvc: LineItemService,
               private requestSvc: RequestService,
+              private router: Router,
               private route: ActivatedRoute) { }
 
   ngOnInit(): void {
@@ -51,6 +53,20 @@ export class RequestLinesComponent implements OnInit {
         console.log(err);
       }
     )
+  }
+
+  delete(lineItemId: number) {
+    // delete the product from the DB
+    this.lineItemSvc.delete(lineItemId).subscribe(
+      resp => {
+        this.lineItem = resp as LineItem;
+        // reload to the product list component
+        this.ngOnInit();
+      },
+      err => {
+        console.log(err);
+      }
+    );
   }
 
 }
