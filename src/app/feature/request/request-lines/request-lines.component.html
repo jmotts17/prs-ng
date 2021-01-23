@@ -19,9 +19,9 @@
     </tbody>
 </table>
 
-<section class="heading">
+<section *ngIf='request' class="heading">
     <span class="page-title font-weight-bold font-italic">[{{linesTitle}}]</span>
-    <a routerLink='/product-create'>
+    <a routerLink='/line-item-create/{{request.id}}'>
         <img width='20' height='20' src='assets/add-icon.png' title='Add New'>
     </a>
 </section>

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router, ActivatedRoute } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 import { LineItem } from 'src/app/model/line-item.class';
 import { LineItemService } from '../../../service/line-item.service';
 import { Request } from 'src/app/model/request.class';
@@ -20,7 +20,6 @@ export class RequestLinesComponent implements OnInit {
 
   constructor(private lineItemSvc: LineItemService,
               private requestSvc: RequestService,
-              private router: Router,
               private route: ActivatedRoute) { }
 
   ngOnInit(): void {

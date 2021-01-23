@@ -18,6 +18,7 @@ import { RequestDetailComponent } from './feature/request/request-detail/request
 import { RequestCreateComponent } from './feature/request/request-create/request-create.component';
 import { RequestEditComponent } from './feature/request/request-edit/request-edit.component';
 import { RequestLinesComponent } from './feature/request/request-lines/request-lines.component';
+import { LineItemCreateComponent } from './feature/lineItem/line-item-create/line-item-create.component';
 import { NoComponentDefinedComponent } from './core/no-component-defined/no-component-defined.component';
 
 const routes: Routes = [
@@ -40,6 +41,7 @@ const routes: Routes = [
   { path: "request-detail/:id", component: RequestDetailComponent},
   { path: "request-edit/:id", component: RequestEditComponent},
   { path: "request-lines/:id", component: RequestLinesComponent},
+  { path: "line-item-create/:id", component: LineItemCreateComponent},
   { path: "**", component: NoComponentDefinedComponent}
 ];
 
