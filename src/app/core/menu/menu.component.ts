@@ -9,14 +9,16 @@ import { SystemService } from 'src/app/service/system.service';
   styleUrls: ['./menu.component.css']
 })
 export class MenuComponent implements OnInit {
-  user: User = new User;
+  user: User = new User();
 
   constructor(private sysSvc: SystemService) { }
   
   ngOnInit(): void {
+    // Set user to currently logged in user
     this.user = this.sysSvc.loggedInUser;
   }
 
+  // Array of Menu Options
   menuItems : MenuItem[] = [
     new MenuItem("User", "/user-list", "User List"),
     new MenuItem("Vendor", "/vendor-list", "Vendor List"),
