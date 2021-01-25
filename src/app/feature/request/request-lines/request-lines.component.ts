@@ -17,6 +17,7 @@ export class RequestLinesComponent implements OnInit {
   lineItems: LineItem[] = [];
   lineItem: LineItem = new LineItem();
   isHidden = false;
+  isDisabled = false;
   requestId = 0;
 
   constructor(private lineItemSvc: LineItemService,
@@ -35,6 +36,13 @@ export class RequestLinesComponent implements OnInit {
     this.requestSvc.getById(this.requestId).subscribe(
       resp => {
         this.request = resp as Request;
+
+        // Disable Submit for Review Button if in Review Status
+        if(this.request.status === "Review") {
+          this.isDisabled = true;
+        } else {
+          this.isDisabled = false;
+        }
       },
       err => {
         console.log(err);
@@ -54,6 +62,7 @@ export class RequestLinesComponent implements OnInit {
         console.log(err);
       }
     )
+
   }
 
   // Delete a lineitem from the request

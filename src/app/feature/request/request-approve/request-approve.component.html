@@ -1,7 +1,7 @@
 <app-menu></app-menu>
 <section class="heading">
     <span class="page-title font-weight-bold font-italic">[{{requestTitle}}]</span>
-    <span>&nbsp;<a routerLink="/request-review/{{request.user.id}}">Return to List</a></span>
+    <span *ngIf='request'>&nbsp;<a routerLink="/request-review/{{request.user.id}}">Return to List</a></span>
 </section>
 <table *ngIf='request' class="table table-sm table-striped">
     <thead>
@@ -39,7 +39,7 @@
         <button class="btn btn-primary" (click)="approve()">{{approveBtn}}</button>
         <span *ngIf="request">
             <input [(ngModel)]="request.reasonForRejection" class="rounded" type="text" placeholder="Reason for Rejection">
-            <span *ngIf="request.reasonForRejection"><button class="btn btn-sm btn-danger" (click)="reject()">{{rejectBtn}}</button></span>
+            <span *ngIf="request.reasonForRejection"><button class="btn btn-danger" (click)="reject()">{{rejectBtn}}</button></span>
         </span>
     </tbody>
 </table>

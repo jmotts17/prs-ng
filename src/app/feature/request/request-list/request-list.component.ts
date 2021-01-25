@@ -9,7 +9,7 @@ import { SystemService } from '../../../service/system.service';
   styleUrls: ['./request-list.component.css']
 })
 export class RequestListComponent implements OnInit {
-  title = "Request List";
+  title = "PurchaseRequest List";
   requests: Request[] = [];
 
   constructor(private requestSvc: RequestService,
