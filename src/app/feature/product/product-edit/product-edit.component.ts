@@ -27,11 +27,10 @@ export class ProductEditComponent implements OnInit {
     this.route.params.subscribe(
       parms => { this.productId = parms['id']; });
     
-    // get the product id
+    // get the product
     this.productSvc.getById(this.productId).subscribe(
       resp => {
         this.product = resp as Product;
-        console.log("Product", this.product);
       },
       err => {
         console.log(err);
