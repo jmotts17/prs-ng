@@ -15,8 +15,8 @@ import { RequestService } from 'src/app/service/request.service';
 export class LineItemCreateComponent implements OnInit {
   title = "PurchaseRequest Line Items Create - PR ID: ";
   submitBtnTitle = "Create";
-  lineItem: LineItem = new LineItem();
   products: Product[] = [];
+  lineItem: LineItem = new LineItem();
   request: Request = new Request();
   requestId = 0;
 
@@ -55,7 +55,9 @@ export class LineItemCreateComponent implements OnInit {
   }
 
   save() {
+    // set the line item request to the current request
     this.lineItem.request = this.request;
+    
     // save the line item to the DB
     this.lineItemSvc.create(this.lineItem).subscribe(
       resp => {

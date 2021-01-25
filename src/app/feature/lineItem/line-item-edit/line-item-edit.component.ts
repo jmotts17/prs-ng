@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { LineItem } from 'src/app/model/line-item.class';
 import { Product } from 'src/app/model/product.class';
-import { Request } from 'src/app/model/request.class';
 import { LineItemService } from 'src/app/service/line-item.service';
 import { ProductService } from 'src/app/service/product.service';
 
