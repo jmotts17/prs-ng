@@ -21,8 +21,8 @@ import { RequestLinesComponent } from './feature/request/request-lines/request-l
 import { RequestReviewComponent } from './feature/request/request-review/request-review.component';
 import { RequestApproveComponent } from './feature/request/request-approve/request-approve.component';
 import { LineItemCreateComponent } from './feature/lineItem/line-item-create/line-item-create.component';
-import { NoComponentDefinedComponent } from './core/no-component-defined/no-component-defined.component';
 import { LineItemEditComponent } from './feature/lineItem/line-item-edit/line-item-edit.component';
+import { NoComponentDefinedComponent } from './core/no-component-defined/no-component-defined.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'user-login', pathMatch: 'full' },

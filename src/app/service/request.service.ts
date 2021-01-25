@@ -4,6 +4,7 @@ import { Observable, ObservableLike } from 'rxjs';
 import { Request } from '../model/request.class';
 
 const URL = "http://localhost:8080/requests";
+
 @Injectable({
   providedIn: 'root'
 })
@@ -47,12 +48,12 @@ export class RequestService {
     return this.http.get(URL+'/list-review/'+id) as Observable<Request[]>;
   }
 
-  // Approve a request
+  // approve a request
   approve(request: Request) : Observable<Request> {
     return this.http.put(URL+'/approve', request) as Observable<Request>;
   }
 
-  // Reject a request
+  // reject a request
   reject(request: Request) : Observable<Request> {
     return this.http.put(URL+'/reject', request) as Observable<Request>;
   }

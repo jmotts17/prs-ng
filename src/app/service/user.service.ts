@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 import { User } from '../model/user.class';
 
 const URL = "http://localhost:8080/users";
+
 @Injectable({
   providedIn: 'root'
 })

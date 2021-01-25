@@ -1,4 +1,3 @@
-import { ViewChildrenDecorator } from "@angular/core";
 import { Vendor } from "../model/vendor.class";
 
 export class Product {

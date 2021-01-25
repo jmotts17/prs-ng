@@ -1,7 +1,6 @@
 import { Request } from './request.class';
 import { Product } from './product.class';
 
-
 export class LineItem {
     id: number;
     request: Request;

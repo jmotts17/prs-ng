@@ -24,7 +24,7 @@ export class VendorEditComponent implements OnInit {
       parms => {
         this.vendorId = parms['id'];
       });
-    // get vendor id
+    // get vendor by id
     this.vendorSvc.getById(this.vendorId).subscribe(
       resp => {
         this.vendor = resp as Vendor;

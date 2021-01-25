@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 import { Vendor } from '../model/vendor.class';
 
 const URL = "http://localhost:8080/vendors";
+
 @Injectable({
   providedIn: 'root'
 })

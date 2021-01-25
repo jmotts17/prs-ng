@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 import { LineItem } from '../model/line-item.class';
 
 const URL = "http://localhost:8080/line-items";
+
 @Injectable({
   providedIn: 'root'
 })
@@ -17,7 +18,7 @@ export class LineItemService {
     return this.http.get(URL+'/') as Observable<LineItem[]>;
   }
 
-  // get lineItem by id
+  // get lineItem by ID
   getById(id) : Observable<LineItem> {
     return this.http.get(URL+'/'+id) as Observable<LineItem>;
   }
