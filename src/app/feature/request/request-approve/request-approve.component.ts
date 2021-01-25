@@ -55,6 +55,7 @@ export class RequestApproveComponent implements OnInit {
     )
   }
 
+  // Approve a request
   approve() {
     this.requestSvc.approve(this.request).subscribe(
       resp => {
@@ -65,6 +66,7 @@ export class RequestApproveComponent implements OnInit {
     )
   }
 
+  // Reject a request
   reject() {
     this.requestSvc.reject(this.request).subscribe(
       resp => {

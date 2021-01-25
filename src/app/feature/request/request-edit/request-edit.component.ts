@@ -21,13 +21,14 @@ export class RequestEditComponent implements OnInit {
               private router: Router) { }
 
   ngOnInit(): void {
+    // set the request user to the current user
     this.request.user = this.sysSvc.loggedInUser;
 
-    // get id from url
+    // get the request id
     this.route.params.subscribe(
       parms => { this.requestId = parms['id']; });
 
-    // get the request id
+    // get the request by the id
     this.requestSvc.getById(this.requestId).subscribe(
       resp => {
         this.request = resp as Request;

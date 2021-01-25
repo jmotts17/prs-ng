@@ -11,7 +11,7 @@ import { RequestService } from 'src/app/service/request.service';
   styleUrls: ['./request-lines.component.css']
 })
 export class RequestLinesComponent implements OnInit {
-  requestTitle = "Purchase Request Line Items";
+  requestTitle = "PurchaseRequest Line Items";
   linesTitle = "Lines";
   request: Request = null;
   lineItems: LineItem[] = [];
@@ -45,6 +45,7 @@ export class RequestLinesComponent implements OnInit {
     this.lineItemSvc.getLineItemsByRequestId(this.requestId).subscribe(
       resp => {
         this.lineItems = resp as LineItem[];
+        // Set flag to true if no lineItems
         if(this.lineItems.length === 0) {
           this.isHidden = true;
         }
@@ -55,12 +56,13 @@ export class RequestLinesComponent implements OnInit {
     )
   }
 
+  // Delete a lineitem from the request
   delete(lineItemId: number) {
     // delete the product from the DB
     this.lineItemSvc.delete(lineItemId).subscribe(
       resp => {
         this.lineItem = resp as LineItem;
-        // reload to the product list component
+        // reload current page
         this.ngOnInit();
       },
       err => {
@@ -69,6 +71,7 @@ export class RequestLinesComponent implements OnInit {
     );
   }
 
+  // Submit a request for review
   submit() {
     this.requestSvc.submit(this.request).subscribe(
       resp => {

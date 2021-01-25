@@ -21,7 +21,9 @@ export class RequestCreateComponent implements OnInit {
   ngOnInit(): void { }
 
   save() {
+    // Set the request user to the current user
     this.request.user = this.sysSvc.loggedInUser;
+    
     // save the request to the DB
     this.requestSvc.create(this.request).subscribe(
       resp => {

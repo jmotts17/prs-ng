@@ -1,7 +1,7 @@
 <app-menu></app-menu>
 <section class="heading">
     <span class="page-title font-weight-bold font-italic">[{{requestTitle}}]</span>
-    <span>&nbsp;<a routerLink="/request-list">Return to List</a></span>
+    <span>&nbsp;<a routerLink="/request-review/{{request.user.id}}">Return to List</a></span>
 </section>
 <table *ngIf='request' class="table table-sm table-striped">
     <thead>
