@@ -8,15 +8,14 @@
 <table class="table table-sm table-striped">
     <thead>
         <tr>
-            <th>ID</th><th>Username</th><th>Password</th><th>Name</th><th>Phone Number</th><th>Email</th><th>Reviewer</th><th>Admin</th><th>Action</th>
+            <th>ID</th><th>Username</th><th>Name</th><th>Phone Number</th><th>Email</th><th>Reviewer</th><th>Admin</th><th>Action</th>
         </tr>
     </thead>
     <tbody>
         <tr *ngFor='let user of users'>
             <td>{{user.id}}</td>
             <td>{{user.userName}}</td>
-            <td>{{user.password}}</td>
-            <td>{{user.firstName}} {{user.lastName}}</td>
+            <td>{{user.lastName}}, {{user.firstName}}</td>
             <td>{{user.phoneNumber}}</td>
             <td>{{user.email}}</td>
             <td><input [(ngModel)]="user.reviewer" class="rounded" type="checkbox" disabled></td>

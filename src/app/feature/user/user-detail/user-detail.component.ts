@@ -23,7 +23,7 @@ export class UserDetailComponent implements OnInit {
       parms => {
         this.userId = parms['id'];
       });
-    // get user by id
+    // get user by user id
     this.userSvc.getById(this.userId).subscribe(
       resp => {
         this.user = resp as User;
