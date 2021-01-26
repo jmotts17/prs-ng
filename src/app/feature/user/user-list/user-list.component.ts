@@ -27,6 +27,7 @@ export class UserListComponent implements OnInit {
     this.userSvc.getAll().subscribe(
       resp => {
         this.users = resp as User[];
+        console.log(this.users);
       },
       err => {
         console.log(err);
