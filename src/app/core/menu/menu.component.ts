@@ -19,7 +19,7 @@ export class MenuComponent implements OnInit {
     this.user = this.sysSvc.loggedInUser;
 
     // Hides review menu option if user is not a reviewer
-    if(!(this.user.isReviewer)) {
+    if(!(this.user.reviewer)) {
       this.menuItems.splice(this.reviewIndex, 1);
     }
   }
