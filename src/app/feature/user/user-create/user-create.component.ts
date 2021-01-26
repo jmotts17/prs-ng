@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { User } from 'src/app/model/user.class';
-import { SystemService } from 'src/app/service/system.service';
+import { Location } from '@angular/common';
 import { UserService } from 'src/app/service/user.service';
 
 @Component({
@@ -15,7 +15,8 @@ export class UserCreateComponent implements OnInit {
   user: User = new User();
   
   constructor(private userSvc: UserService,
-              private router: Router) { }
+              private router: Router,
+              private loc: Location) { }
 
   ngOnInit(): void {
   }
@@ -32,6 +33,10 @@ export class UserCreateComponent implements OnInit {
         console.log(err);
       }
     )
+  }
+
+  backClicked() {
+    this.loc.back();
   }
 
 }

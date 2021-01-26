@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Location } from '@angular/common';
 import { Router } from '@angular/router';
 import { Product } from 'src/app/model/product.class';
 import { Vendor } from 'src/app/model/vendor.class';
@@ -18,7 +19,8 @@ export class ProductCreateComponent implements OnInit {
 
   constructor(private productSvc: ProductService,
               private vendorSvc: VendorService,
-              private router: Router) { }
+              private router: Router,
+              private loc: Location) { }
 
   ngOnInit(): void {
     // get list of vendors due to FK constraint
@@ -45,6 +47,10 @@ export class ProductCreateComponent implements OnInit {
         console.log(err);
       }
     );
+  }
+
+  backClicked() {
+    this.loc.back();
   }
 
 }

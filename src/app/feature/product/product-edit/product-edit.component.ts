@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Location } from '@angular/common';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Product } from 'src/app/model/product.class';
 import { Vendor } from 'src/app/model/vendor.class';
@@ -20,7 +21,8 @@ export class ProductEditComponent implements OnInit {
   constructor(private productSvc: ProductService,
               private vendorSvc: VendorService,
               private route: ActivatedRoute,
-              private router: Router) { }
+              private router: Router,
+              private loc: Location) { }
 
   ngOnInit(): void {
     // get id from url
@@ -60,6 +62,10 @@ export class ProductEditComponent implements OnInit {
         console.log(err);
       }
     )
+  }
+
+  backClicked() {
+    this.loc.back();
   }
 
   compVendor(a: Vendor, b: Vendor): boolean {

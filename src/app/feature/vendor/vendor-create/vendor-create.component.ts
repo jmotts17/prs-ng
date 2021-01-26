@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Vendor } from 'src/app/model/vendor.class';
+import { Location } from '@angular/common';
 import { VendorService } from 'src/app/service/vendor.service';
 
 @Component({
@@ -14,7 +15,8 @@ export class VendorCreateComponent implements OnInit {
   vendor: Vendor = new Vendor();
 
   constructor(private vendorSvc: VendorService,
-              private router: Router) { }
+              private router: Router,
+              private loc: Location) { }
 
   ngOnInit(): void {
   }
@@ -31,6 +33,10 @@ export class VendorCreateComponent implements OnInit {
         console.log(err);
       }
     )
+  }
+
+  backClicked() {
+    this.loc.back();
   }
 
 }

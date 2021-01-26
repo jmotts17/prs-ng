@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Location } from '@angular/common';
 import { Router } from '@angular/router';
 import { Request } from 'src/app/model/request.class';
 import { RequestService } from 'src/app/service/request.service';
@@ -16,7 +17,8 @@ export class RequestCreateComponent implements OnInit {
 
   constructor(private requestSvc: RequestService,
               private sysSvc: SystemService,
-              private router: Router) { }
+              private router: Router,
+              private loc: Location) { }
 
   ngOnInit(): void { }
 
@@ -36,6 +38,10 @@ export class RequestCreateComponent implements OnInit {
         console.log(err);
       }
     );
+  }
+
+  backClicked() {
+    this.loc.back();
   }
 
 }
