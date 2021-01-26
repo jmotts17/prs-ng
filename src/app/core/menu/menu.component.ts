@@ -10,12 +10,18 @@ import { SystemService } from 'src/app/service/system.service';
 })
 export class MenuComponent implements OnInit {
   user: User = new User();
+  reviewIndex: number = 4;
 
   constructor(private sysSvc: SystemService) { }
   
   ngOnInit(): void {
     // Set user to currently logged in user
     this.user = this.sysSvc.loggedInUser;
+
+    // Hides review menu option if user is not a reviewer
+    if(!(this.user.isReviewer)) {
+      this.menuItems.splice(this.reviewIndex, 1);
+    }
   }
 
   // Array of Menu Options
