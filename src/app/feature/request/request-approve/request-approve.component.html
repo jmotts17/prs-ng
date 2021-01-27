@@ -14,7 +14,7 @@
             <td>{{request.id}}</td>
             <td>{{request.description}}</td>
             <td>{{request.status}}</td>
-            <td>${{request.total}}</td>
+            <td>{{request.total | currency}}</td>
         </tr>
     </tbody>
 </table>
@@ -33,8 +33,8 @@
             <td>{{lineItem.id}}</td>
             <td>{{lineItem.product.name}}</td>
             <td>{{lineItem.quantity}}</td>
-            <td>${{lineItem.product.price}}</td>
-            <td>${{lineItem.quantity * lineItem.product.price}}</td>
+            <td>{{lineItem.product.price | currency}}</td>
+            <td>{{lineItem.quantity * lineItem.product.price | currency}}</td>
         </tr>
         <button class="btn btn-primary" (click)="approve()">{{approveBtn}}</button>
         <span *ngIf="request">

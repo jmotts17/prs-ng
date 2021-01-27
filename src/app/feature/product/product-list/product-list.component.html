@@ -16,7 +16,7 @@
             <td>{{product.id}}</td>
             <td>{{product.name}}</td>
             <td>{{product.vendor.name}}</td>
-            <td>${{product.price}}</td>
+            <td>{{product.price | currency}}</td>
             <td><a routerLink='/product-detail/{{product.id}}'>
                 <img width='20' height='20' src='assets/details.png' title='Product Details'></a> 
             <span [hidden]="isNotAdmin"> | <a routerLink='/product-edit/{{product.id}}'><img width='20' height='20' src='assets/pencil-icon.png' title='Product Edit'></a></span></td>

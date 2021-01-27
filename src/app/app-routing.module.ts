@@ -22,6 +22,7 @@ import { RequestReviewComponent } from './feature/request/request-review/request
 import { RequestApproveComponent } from './feature/request/request-approve/request-approve.component';
 import { LineItemCreateComponent } from './feature/lineItem/line-item-create/line-item-create.component';
 import { LineItemEditComponent } from './feature/lineItem/line-item-edit/line-item-edit.component';
+import { HomeComponent } from './core/home/home.component'
 import { NoComponentDefinedComponent } from './core/no-component-defined/no-component-defined.component';
 
 const routes: Routes = [
@@ -48,6 +49,7 @@ const routes: Routes = [
   { path: "request-approve/:id", component: RequestApproveComponent},
   { path: "line-item-create/:id", component: LineItemCreateComponent},
   { path: "line-item-edit/:id", component: LineItemEditComponent},
+  { path: "home", component: HomeComponent},
   { path: "**", component: NoComponentDefinedComponent}
 ];
 

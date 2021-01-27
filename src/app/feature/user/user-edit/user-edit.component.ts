@@ -3,6 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { User } from 'src/app/model/user.class';
 import { Location } from '@angular/common';
 import { UserService } from 'src/app/service/user.service';
+import { SystemService } from 'src/app/service/system.service';
 
 @Component({
   selector: 'app-user-edit',
@@ -14,13 +15,21 @@ export class UserEditComponent implements OnInit {
   user: User = null;
   userId: number = 0;
   submitBtnTitle = "Save";
+  isNotAdmin = false;
 
   constructor(private userSvc: UserService,
               private router: Router,
               private route: ActivatedRoute,
-              private loc: Location) { }
+              private loc: Location,
+              private sysSvc : SystemService ) { }
 
   ngOnInit(): void {
+
+    // Checks to see if the logged in user is an admin
+    if(!(this.sysSvc.loggedInUser.admin)) {
+      this.isNotAdmin = true;
+    }
+
     // get the id from the url
     this.route.params.subscribe(
       parms => {
