@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { Vendor } from 'src/app/model/vendor.class';
 import { Location } from '@angular/common';
 import { VendorService } from 'src/app/service/vendor.service';
+import { SystemService } from 'src/app/service/system.service';
 
 @Component({
   selector: 'app-vendor-create',
@@ -15,10 +16,13 @@ export class VendorCreateComponent implements OnInit {
   vendor: Vendor = new Vendor();
 
   constructor(private vendorSvc: VendorService,
+              private sysSvc: SystemService,
               private router: Router,
               private loc: Location) { }
 
   ngOnInit(): void {
+    // Check to see if there is a logged in user
+    this.sysSvc.checkLogin();
   }
 
   save() {

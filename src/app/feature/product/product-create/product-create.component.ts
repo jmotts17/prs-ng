@@ -5,6 +5,7 @@ import { Product } from 'src/app/model/product.class';
 import { Vendor } from 'src/app/model/vendor.class';
 import { ProductService } from 'src/app/service/product.service';
 import { VendorService } from 'src/app/service/vendor.service';
+import { SystemService } from 'src/app/service/system.service';
 
 @Component({
   selector: 'app-product-create',
@@ -19,10 +20,14 @@ export class ProductCreateComponent implements OnInit {
 
   constructor(private productSvc: ProductService,
               private vendorSvc: VendorService,
+              private sysSvc: SystemService,
               private router: Router,
               private loc: Location) { }
 
   ngOnInit(): void {
+    // Check to see if there is a logged in user
+    this.sysSvc.checkLogin();
+    
     // get list of vendors due to FK constraint
     this.vendorSvc.getAll().subscribe(
       resp => {

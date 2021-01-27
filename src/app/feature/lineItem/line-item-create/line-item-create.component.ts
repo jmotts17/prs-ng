@@ -6,6 +6,7 @@ import { Request } from 'src/app/model/request.class';
 import { LineItemService } from 'src/app/service/line-item.service';
 import { ProductService } from 'src/app/service/product.service';
 import { RequestService } from 'src/app/service/request.service';
+import { SystemService } from 'src/app/service/system.service';
 
 @Component({
   selector: 'app-line-item-create',
@@ -23,10 +24,14 @@ export class LineItemCreateComponent implements OnInit {
   constructor(private lineItemSvc: LineItemService,
               private productSvc: ProductService,
               private requestSvc: RequestService,
+              private sysSvc: SystemService,
               private route: ActivatedRoute,
               private router: Router) { }
 
   ngOnInit(): void {
+    // Check to see if there is a logged in user
+    this.sysSvc.checkLogin();
+
     // get the id from the url
     this.route.params.subscribe(
       parms => {

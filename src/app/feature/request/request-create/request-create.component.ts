@@ -20,7 +20,10 @@ export class RequestCreateComponent implements OnInit {
               private router: Router,
               private loc: Location) { }
 
-  ngOnInit(): void { }
+  ngOnInit(): void { 
+    // Check to see if there is a logged in user
+    this.sysSvc.checkLogin();
+  }
 
   save() {
     // Set the request user to the current user

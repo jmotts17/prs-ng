@@ -3,6 +3,7 @@ import { Location } from '@angular/common';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Vendor } from 'src/app/model/vendor.class';
 import { VendorService } from 'src/app/service/vendor.service';
+import { SystemService } from 'src/app/service/system.service';
 
 @Component({
   selector: 'app-vendor-edit',
@@ -16,11 +17,15 @@ export class VendorEditComponent implements OnInit {
   submitBtnTitle = "Save";
 
   constructor(private vendorSvc: VendorService,
+              private sysSvc: SystemService,
               private router: Router, 
               private route: ActivatedRoute,
               private loc: Location) { }
 
   ngOnInit(): void {
+    // Check to see if there is a logged in user
+    this.sysSvc.checkLogin();
+
     // get the id from the url
     this.route.params.subscribe(
       parms => {

@@ -23,6 +23,9 @@ export class RequestEditComponent implements OnInit {
               private loc: Location) { }
 
   ngOnInit(): void {
+    // Check to see if there is a logged in user
+    this.sysSvc.checkLogin();
+        
     // set the request user to the current user
     this.request.user = this.sysSvc.loggedInUser;
 

@@ -28,6 +28,9 @@ export class RequestApproveComponent implements OnInit {
               private route: ActivatedRoute) { }
 
   ngOnInit(): void {
+    // Check to see if there is a logged in user
+    this.sysSvc.checkLogin();
+
     // get the id from the url
     this.route.params.subscribe(
       parms => {

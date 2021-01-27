@@ -4,6 +4,7 @@ import { LineItem } from 'src/app/model/line-item.class';
 import { Product } from 'src/app/model/product.class';
 import { LineItemService } from 'src/app/service/line-item.service';
 import { ProductService } from 'src/app/service/product.service';
+import { SystemService } from 'src/app/service/system.service';
 
 @Component({
   selector: 'app-line-item-edit',
@@ -19,10 +20,14 @@ export class LineItemEditComponent implements OnInit {
 
   constructor(private lineItemSvc: LineItemService,
             private productSvc: ProductService,
+            private sysSvc: SystemService,
             private route: ActivatedRoute,
             private router: Router) { }
 
   ngOnInit(): void {
+    // Check to see if there is a logged in user
+    this.sysSvc.checkLogin();
+
     // get id from the url
     this.route.params.subscribe(
       parms => { this.lineItemId = parms['id']});
