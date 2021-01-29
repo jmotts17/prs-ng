@@ -11,7 +11,7 @@
             <th><a [ngClass]='colClasses' (click)="sortBy('id')">ID</a></th>
             <th><a [ngClass]='colClasses' (click)="sortBy('id')">Username</a></th>
             <th><a [ngClass]='colClasses' (click)="sortBy('id')">Name</a></th>
-            <th>Phone Number</th><th>Email</th><th>Reviewer</th><th>Admin</th><th>Action</th>
+            <th>Reviewer</th><th>Admin</th><th>Action</th>
         </tr>
     </thead>
     <tbody>
@@ -19,8 +19,6 @@
             <td>{{user.id}}</td>
             <td>{{user.userName}}</td>
             <td>{{user.lastName}}, {{user.firstName}}</td>
-            <td>{{user.phoneNumber}}</td>
-            <td>{{user.email}}</td>
             <td><input [(ngModel)]="user.reviewer" class="rounded" type="checkbox" disabled></td>
             <td><input [(ngModel)]="user.admin" class="rounded" type="checkbox" disabled></td>
             <td><a routerLink='/user-detail/{{user.id}}'>
