@@ -11,6 +11,9 @@ import { SystemService } from '../../../service/system.service';
 export class RequestListComponent implements OnInit {
   title = "PurchaseRequest List";
   requests: Request[] = [];
+  sortCriteria: string = "id";
+  sortOrder: string = "asc";
+  colClasses = "btn btn-link font-weight-bold";
 
 
   constructor(private requestSvc: RequestService,
@@ -38,8 +41,14 @@ export class RequestListComponent implements OnInit {
       err => {
         console.log(err);
       }
-    )
-    
+    ) 
+  }
+
+  sortBy(column: string): void {
+    if(column == this.sortCriteria){
+      this.sortOrder = (this.sortOrder == "desc") ? "asc" : "desc";
+    }
+    this.sortCriteria = column;
   }
   
 }

@@ -8,16 +8,17 @@
 <table class="table table-sm table-striped">
     <thead>
         <tr>
-            <th>ID</th><th>Code</th><th>Name</th><th>Phone Number</th><th>Email</th><th>Action</th>
+            <th><a [ngClass]='colClasses' (click)="sortBy('id')">ID</a></th>
+            <th><a [ngClass]='colClasses' (click)="sortBy('code')">Code</a></th>
+            <th><a [ngClass]='colClasses' (click)="sortBy('name')">Name</a></th>
+            <th>Action</th>
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor='let vendor of vendors'>
+        <tr *ngFor='let vendor of vendors | sort: sortCriteria:sortOrder'>
             <td>{{vendor.id}}</td>
             <td>{{vendor.code}}</td>
             <td>{{vendor.name}}</td>
-            <td>{{vendor.phoneNumber}}</td>
-            <td>{{vendor.email}}</td>
             <td><a routerLink='/vendor-detail/{{vendor.id}}'>
                 <img width='20' height='20' src='assets/details.png' title='Vendor Details'></a>
                 <span [hidden]="isNotAdmin"> | <a routerLink='/vendor-edit/{{vendor.id}}'><img width='20' height='20' src='assets/pencil-icon.png' title='Vendor Edit'></a></span></td>

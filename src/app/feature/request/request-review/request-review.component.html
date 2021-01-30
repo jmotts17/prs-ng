@@ -5,11 +5,16 @@
 <table class="table table-sm table-striped">
     <thead>
         <tr>
-            <th>ID</th><th>User</th><th>Description</th><th>Status</th><th>Total</th><th>Action</th>
+            <th><a [ngClass]='colClasses' (click)="sortBy('id')">ID</a></th>
+            <th><a [ngClass]='colClasses' (click)="sortBy('userName')">User</a></th>
+            <th><a [ngClass]='colClasses' (click)="sortBy('description')">Description</a></th>
+            <th><a [ngClass]='colClasses' (click)="sortBy('status')">Status</a></th>
+            <th><a [ngClass]='colClasses' (click)="sortBy('total')">Total</a></th>
+            <th>Action</th>
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor='let request of requests'>
+        <tr *ngFor='let request of requests | sort: sortCriteria:sortOrder'>
             <td>{{request.id}}</td>
             <td>{{request.user.userName}}</td>
             <td>{{request.description}}</td>

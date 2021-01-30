@@ -8,11 +8,15 @@
 <table class="table table-sm table-striped">
     <thead>
         <tr>
-            <th>ID</th><th>Product Name</th><th>Vendor</th><th>Price</th><th>Action</th>
+            <th><a [ngClass]='colClasses' (click)="sortBy('id')">ID</a></th>
+            <th><a [ngClass]='colClasses' (click)="sortBy('name')">Product Name</a></th>
+            <th><a [ngClass]='colClasses' (click)="sortBy('vendor.name')">Vendor</a></th>
+            <th><a [ngClass]='colClasses' (click)="sortBy('price')">Price</a></th>
+            <th>Action</th>
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor='let product of products'>
+        <tr *ngFor='let product of products | sort: sortCriteria:sortOrder'>
             <td>{{product.id}}</td>
             <td>{{product.name}}</td>
             <td>{{product.vendor.name}}</td>
