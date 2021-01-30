@@ -10,7 +10,7 @@ import { UserService } from 'src/app/service/user.service';
   styleUrls: ['./user-login.component.css']
 })
 export class UserLoginComponent implements OnInit {
-  title: string = 'Login';
+  title: string = 'Welcome to PRS!';
   message: string = "";
   user: User = new User();
 
