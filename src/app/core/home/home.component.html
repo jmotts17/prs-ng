@@ -1,10 +1,10 @@
 <app-menu></app-menu>
-<div class="component">
-    <section class="heading">
-        <span class="page-title font-weight-bold font-italic">{{title}} {{user.userName}}!</span>
-        <span *ngIf="user">&nbsp;<a routerLink="/user-edit/{{user.id}}">Edit User</a></span>
-    </section>
-    <main *ngIf='user' class="single">
+<div class="component container-md vertical-center">
+    <main *ngIf='user' class="single box-style">
+        <section class="heading">
+            <span class="page-title font-weight-bold font-italic"><h6>{{title}} {{user.userName}}!</h6></span>
+            <span *ngIf="user">&nbsp;<a routerLink="/user-edit/{{user.id}}">Edit User</a></span>
+        </section>
         <table class="table table-sm">
             <tr>
                 <td>ID</td>

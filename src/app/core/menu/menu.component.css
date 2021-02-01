@@ -9,6 +9,13 @@ ul {
   margin: 0;
 }
 
+.logo {
+  margin: 0 1.5em;
+  font-weight: bold;
+  font-size: 20px;
+  color: #408697;
+}
+
 li {
   display: inline-block;
   text-align: center;

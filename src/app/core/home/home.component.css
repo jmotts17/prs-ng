@@ -1,0 +1,31 @@
+section {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1em;
+}
+
+.vertical-center {
+  min-height: 100%;
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.box-style {
+  background-color: #52d6f4;
+  border-radius: 4px;
+  border: 2px solid black;
+  padding: 2em;
+}
+
+table {
+  border-collapse: separate;
+  border-spacing: 5px;
+}
+
+input {
+  background-color: #fff;
+  border: 1px solid #8d8c8a;
+}
