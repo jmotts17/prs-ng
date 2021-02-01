@@ -29,11 +29,11 @@ a {
   font-family: Tahoma;
 }
 
-​ a:hover {
+a:hover {
   background-color: black;
 }
 
-​ img {
+img {
   max-width: 4%;
   max-height: 4%;
 }
