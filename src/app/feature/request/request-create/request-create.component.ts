@@ -33,7 +33,6 @@ export class RequestCreateComponent implements OnInit {
     this.requestSvc.create(this.request).subscribe(
       resp => {
         this.request = resp as Request;
-        console.log("Request created", this.request);
         // forward to the request list component
         this.router.navigateByUrl("/request-list");
       },

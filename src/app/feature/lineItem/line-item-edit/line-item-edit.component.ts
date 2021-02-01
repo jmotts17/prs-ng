@@ -36,7 +36,6 @@ export class LineItemEditComponent implements OnInit {
     this.lineItemSvc.getById(this.lineItemId).subscribe(
       resp => {
         this.lineItem = resp as LineItem;
-        console.log("LineItem ", this.lineItem);
       },
       err => {
         console.log(err);

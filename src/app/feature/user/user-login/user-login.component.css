@@ -22,3 +22,8 @@ table {
   border-collapse: separate;
   border-spacing: 5px;
 }
+
+.message-style {
+  color: red;
+  font-style: italic;
+}
