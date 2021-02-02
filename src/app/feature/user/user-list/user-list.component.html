@@ -1,6 +1,6 @@
 <app-menu></app-menu>
 <section class="heading">
-    <span class="page-title font-weight-bold font-italic">[{{title}}]</span>
+    <span class="page-title font-weight-bold font-italic">{{title}} </span>
     <a routerLink='/user-create'>
         <img [hidden]="isNotAdmin" width='20' height='20' src='assets/add-icon.png' title='Add New'>
     </a>
@@ -16,9 +16,9 @@
     </thead>
     <tbody>
         <tr *ngFor='let user of users | sort: sortCriteria:sortOrder'>
-            <td>{{user.id}}</td>
-            <td>{{user.userName}}</td>
-            <td>{{user.lastName}}, {{user.firstName}}</td>
+            <td class="td-style">{{user.id}}</td>
+            <td class="td-style">{{user.userName}}</td>
+            <td class="td-style">{{user.lastName}}, {{user.firstName}}</td>
             <td><input [(ngModel)]="user.reviewer" class="rounded" type="checkbox" disabled></td>
             <td><input [(ngModel)]="user.admin" class="rounded" type="checkbox" disabled></td>
             <td><a routerLink='/user-detail/{{user.id}}'>
