@@ -3,13 +3,27 @@
         <form class="text-center" id="form-style">
             <table *ngIf='user' class="table-sm">
                 <tr class="text-center">
-                    <h6 colspan="2">{{title}}</h6>
+                    <h5 colspan="2">{{title}}</h5>
                 </tr>
                 <tr class="text-center">
-                    <td><input [(ngModel)]='user.userName' name='UserName' type="text" placeholder="Username"></td>
+                    <td>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fa fa-user"></i></span>
+                            </div>
+                            <input [(ngModel)]='user.userName' name='UserName' type='text' placeholder="Username">
+                        </div>
+                    </td>
                 </tr>
                 <tr class="text-center">
-                    <td><input [(ngModel)]='user.password' name='Password' type="password" placeholder="Password"></td>
+                    <td>
+                        <div class="input-group">
+                            <input [(ngModel)]='user.password' name='Password' [type]="fieldTextType ? 'text' : 'password'" placeholder="Password">
+                            <div class="input-group-append">
+                                <span class="input-group-text"><i class="fa eye-style" [ngClass]="{'fa-eye-slash': !fieldTextType, 'fa-eye': fieldTextType }" (click)="toggleFieldTextType()"></i></span>
+                            </div>
+                        </div>
+                    </td>
                 </tr>
                 <tr>
                     <td class="text-center" colspan="2">
