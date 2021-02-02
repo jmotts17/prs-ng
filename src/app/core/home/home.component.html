@@ -1,8 +1,12 @@
 <app-menu></app-menu>
+<header>
+    <h1 class="text-center">Welcome to the Purchase Request System</h1>
+    <img class="max-logo" src="./../../../assets/MAXlogo.png" alt="Max Logo">
+</header>
 <div class="component container-md vertical-center">
     <main *ngIf='user' class="single box-style">
         <section class="heading">
-            <span class="page-title font-weight-bold font-italic"><h6>{{title}} {{user.userName}}!</h6></span>
+            <span class="page-title font-weight-bold font-italic"><h5>{{title}} {{user.userName}}!</h5></span>
             <span *ngIf="user">&nbsp;<a routerLink="/user-edit/{{user.id}}">Edit User</a></span>
         </section>
         <table class="table table-sm">

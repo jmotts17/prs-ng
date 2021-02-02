@@ -12,7 +12,7 @@ ul {
 .logo {
   margin: 0 1.5em;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 23px;
   color: #408697;
 }
 
@@ -31,6 +31,7 @@ a {
 
 a:hover {
   background-color: black;
+  border-radius: 3px;
 }
 
 img {
