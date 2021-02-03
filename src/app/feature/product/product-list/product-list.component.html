@@ -1,6 +1,6 @@
 <app-menu></app-menu>
 <section class="heading">
-    <span class="page-title font-weight-bold font-italic">[{{title}}]</span>
+    <span class="page-title font-weight-bold font-italic">{{title}} </span>
     <a routerLink='/product-create'>
         <img [hidden]="isNotAdmin" width='20' height='20' src='assets/add-icon.png' title='Add New'>
     </a>
@@ -17,10 +17,10 @@
     </thead>
     <tbody>
         <tr *ngFor='let product of products | sort: sortCriteria:sortOrder'>
-            <td>{{product.id}}</td>
-            <td>{{product.name}}</td>
-            <td>{{product.vendor.name}}</td>
-            <td>{{product.price | currency}}</td>
+            <td class="td-style">{{product.id}}</td>
+            <td class="td-style">{{product.name}}</td>
+            <td class="td-style">{{product.vendor.name}}</td>
+            <td class="td-style">{{product.price | currency}}</td>
             <td><a routerLink='/product-detail/{{product.id}}'>
                 <img width='20' height='20' src='assets/details.png' title='Product Details'></a> 
             <span [hidden]="isNotAdmin"> | <a routerLink='/product-edit/{{product.id}}'><img width='20' height='20' src='assets/pencil-icon.png' title='Product Edit'></a></span></td>
