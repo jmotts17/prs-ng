@@ -1,8 +1,8 @@
 <app-menu></app-menu>
 <section class="heading">
     <span class='component-title'>[{{title}} {{request.id}}]</span>
-    <span>&nbsp;<a routerLink="/request-lines/{{request.id}}">Return to List</a></span>
   </section>
+  <span class="pg-left">&nbsp;<a routerLink="/request-lines/{{request.id}}">Return to List</a></span>
   <main class="single">
     <table class="table table-sm">
         <tr>
@@ -25,4 +25,4 @@
       </tr>
     </table>
   </main>
-  <span><button (click)="save()" class="btn btn-sm btn-primary">{{submitBtnTitle}}</button></span>
+  <span class="btn-margin"><button (click)="save()" class="btn btn-sm btn-primary">{{submitBtnTitle}}</button></span>

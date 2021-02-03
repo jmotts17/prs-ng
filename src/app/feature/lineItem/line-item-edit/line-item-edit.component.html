@@ -1,8 +1,8 @@
 <app-menu></app-menu>
 <section class="heading">
     <span class='component-title'>[{{title}}]</span>
-    <span *ngIf="lineItem">&nbsp;<a routerLink="/request-lines/{{lineItem.request.id}}">Return to List</a></span>
-  </section>
+</section>
+<span *ngIf="lineItem" class="pg-left">&nbsp;<a routerLink="/request-lines/{{lineItem.request.id}}">Return to List</a></span>
   <main class="single">
     <table *ngIf="lineItem" class="table table-sm">
         <tr>
@@ -25,4 +25,4 @@
         </tr>
     </table>
   </main>
-  <span><button (click)="save()" class="btn btn-sm btn-primary">{{submitBtnTitle}}</button></span>
+  <span class="btn-margin"><button (click)="save()" class="btn btn-sm btn-primary">{{submitBtnTitle}}</button></span>

@@ -14,7 +14,7 @@ import { SystemService } from 'src/app/service/system.service';
   styleUrls: ['./line-item-create.component.css']
 })
 export class LineItemCreateComponent implements OnInit {
-  title = "PurchaseRequest Line Items Create - PR ID: ";
+  title = "PurchaseRequest Line Item Create - PR ID: ";
   submitBtnTitle = "Create";
   products: Product[] = [];
   lineItem: LineItem = new LineItem();
