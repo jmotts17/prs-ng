@@ -1,0 +1,17 @@
+section {
+  margin-left: 1%;
+  margin-top: 1%;
+}
+
+.section-title {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+main {
+  margin-left: 1%;
+}
+
+.btn-margin {
+  margin-left: 0.75%;
+}

@@ -1,0 +1,17 @@
+.heading {
+  text-align: center;
+  font-size: 50px;
+  padding: 0.5% 0;
+}
+
+.pg-left {
+  padding-left: 15px;
+}
+
+.py-left {
+  padding-left: 13px;
+}
+
+.btn-margin {
+  margin: 2%;
+}

@@ -12,8 +12,8 @@ import { SystemService } from 'src/app/service/system.service';
   styleUrls: ['./request-lines.component.css']
 })
 export class RequestLinesComponent implements OnInit {
-  requestTitle = "PurchaseRequest Line Items";
-  linesTitle = "Lines";
+  requestTitle = "PurchaseRequest Detail";
+  linesTitle = "Line Items";
   request: Request = null;
   lineItems: LineItem[] = [];
   lineItem: LineItem = new LineItem();

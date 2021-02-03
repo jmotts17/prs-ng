@@ -13,7 +13,7 @@ import { SystemService } from 'src/app/service/system.service';
 })
 export class RequestApproveComponent implements OnInit {
   requestTitle = "PurchaseRequest Approve/Reject";
-  linesTitle = "Lines";
+  linesTitle = "Line Items";
   approveBtn = "Approve";
   rejectBtn = "Reject";
   request: Request = null;
