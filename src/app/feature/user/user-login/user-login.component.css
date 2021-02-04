@@ -14,7 +14,7 @@
 #form-style {
   padding: 1em;
   background-color: #52d6f4;
-  border-radius: 4px;
+  border-radius: 15px;
   border: 2px solid black;
 }
 
@@ -34,6 +34,7 @@ input {
 
 button {
   width: 50%;
+  border-radius: 10px;
 }
 
 .message-style {
