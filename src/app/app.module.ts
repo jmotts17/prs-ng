@@ -30,6 +30,7 @@ import { RequestReviewComponent } from './feature/request/request-review/request
 import { RequestApproveComponent } from './feature/request/request-approve/request-approve.component';
 import { HomeComponent } from './core/home/home.component';
 import { SortPipe } from './pipe/sort.pipe';
+import { AboutComponent } from './core/about/about.component';
 
 @NgModule({
   declarations: [
@@ -59,7 +60,8 @@ import { SortPipe } from './pipe/sort.pipe';
     RequestReviewComponent,
     RequestApproveComponent,
     HomeComponent,
-    SortPipe
+    SortPipe,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
