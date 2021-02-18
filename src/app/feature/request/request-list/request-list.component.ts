@@ -35,7 +35,7 @@ export class RequestListComponent implements OnInit {
             this.isHidden = true;
           }
         }
-
+        
         // Checks to see if the logged in user is an admin or reviewer
         // If they are neither, only show their requests
         if(!(this.sysSvc.loggedInUser.admin) && !(this.sysSvc.loggedInUser.reviewer)) { 
