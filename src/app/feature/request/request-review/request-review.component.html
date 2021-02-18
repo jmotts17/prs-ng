@@ -5,7 +5,7 @@
 <table class="table table-sm table-striped">
     <thead>
         <tr>
-            <th><a [ngClass]='colClasses' (click)="sortBy('id')">ID</a></th>
+            <!-- <th><a [ngClass]='colClasses' (click)="sortBy('id')">ID</a></th> -->
             <th><a [ngClass]='colClasses' (click)="sortBy('userName')">User</a></th>
             <th><a [ngClass]='colClasses' (click)="sortBy('description')">Description</a></th>
             <th><a [ngClass]='colClasses' (click)="sortBy('status')">Status</a></th>
@@ -15,7 +15,7 @@
     </thead>
     <tbody>
         <tr *ngFor='let request of requests | sort: sortCriteria:sortOrder'>
-            <td class="td-style">{{request.id}}</td>
+            <!-- <td class="td-style">{{request.id}}</td> -->
             <td class="td-style">{{request.user.userName}}</td>
             <td class="td-style">{{request.description}}</td>
             <td class="td-style">{{request.status}}</td>

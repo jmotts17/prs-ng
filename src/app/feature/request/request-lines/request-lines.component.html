@@ -6,13 +6,14 @@
 <table *ngIf='request' class="table table-sm table-striped">
     <thead>
         <tr>
-            <th class="pg-left">ID</th><th>Description</th><th>Status</th><th>Total</th>
+            <!-- <th class="pg-left">ID</th> -->
+            <th class="pg-left">Description</th><th>Status</th><th>Total</th>
         </tr>
     </thead>
     <tbody>
         <tr>
-            <td class="pg-left">{{request.id}}</td>
-            <td>{{request.description}}</td>
+            <!-- <td class="pg-left">{{request.id}}</td> -->
+            <td class="pg-left">{{request.description}}</td>
             <td>{{request.status}}</td>
             <td>{{request.total | currency}}</td>
         </tr>
@@ -28,13 +29,14 @@
 <table class="table table-sm table-striped">
     <thead>
         <tr>
-            <th class="pg-left">ID</th><th>Product</th><th>Quantity</th><th>Price</th><th>Line Total</th><th [hidden]="isDisabled">Action</th>
+            <!-- <th class="pg-left">ID</th> -->
+            <th class="pg-left">Product</th><th>Quantity</th><th>Price</th><th>Line Total</th><th [hidden]="isDisabled">Action</th>
         </tr>
     </thead>
     <tbody>
         <tr [hidden]="isHidden" *ngFor='let lineItem of lineItems'>
-            <td class="pg-left">{{lineItem.id}}</td>
-            <td>{{lineItem.product.name}}</td>
+            <!-- <td class="pg-left">{{lineItem.id}}</td> -->
+            <td class="pg-left">{{lineItem.product.name}}</td>
             <td>{{lineItem.quantity}}</td>
             <td>{{lineItem.product.price | currency}}</td>
             <td>{{lineItem.quantity * lineItem.product.price | currency}}</td>
@@ -45,7 +47,7 @@
         </tr>
         <button class="btn btn-primary btn-margin" [disabled]="isDisabled" [hidden]="isHidden" (click)="submit()">Submit for Review</button>
         <tr [hidden]="!isHidden">
-            <td class="table-danger">No Line Items yet. Please create a new one!</td>
+            <td class="table-danger pg-left">No Line Items yet. Please create a new one!</td>
             <td class="table-danger"></td>
             <td class="table-danger"></td>
             <td class="table-danger"></td>

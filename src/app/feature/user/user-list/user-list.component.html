@@ -8,7 +8,7 @@
 <table class="table table-sm table-striped">
     <thead>
         <tr>
-            <th><a [ngClass]='colClasses' (click)="sortBy('id')">ID</a></th>
+            <!-- <th><a [ngClass]='colClasses' (click)="sortBy('id')">ID</a></th> -->
             <th><a [ngClass]='colClasses' (click)="sortBy('userName')">Username</a></th>
             <th><a [ngClass]='colClasses' (click)="sortBy('lastName')">Name</a></th>
             <th>Reviewer</th><th>Admin</th><th>Action</th>
@@ -16,7 +16,7 @@
     </thead>
     <tbody>
         <tr *ngFor='let user of users | sort: sortCriteria:sortOrder'>
-            <td class="td-style">{{user.id}}</td>
+            <!-- <td class="td-style">{{user.id}}</td> -->
             <td class="td-style">{{user.userName}}</td>
             <td class="td-style">{{user.lastName}}, {{user.firstName}}</td>
             <td><input [(ngModel)]="user.reviewer" class="rounded" type="checkbox" disabled></td>

@@ -8,7 +8,7 @@
 <table class="table table-sm table-striped">
     <thead>
         <tr>
-            <th><a [ngClass]='colClasses' (click)="sortBy('id')">ID</a></th>
+            <!-- <th><a [ngClass]='colClasses' (click)="sortBy('id')">ID</a></th> -->
             <th><a [ngClass]='colClasses' (click)="sortBy('code')">Code</a></th>
             <th><a [ngClass]='colClasses' (click)="sortBy('name')">Name</a></th>
             <th>Action</th>
@@ -16,7 +16,7 @@
     </thead>
     <tbody>
         <tr *ngFor='let vendor of vendors | sort: sortCriteria:sortOrder'>
-            <td class="td-style">{{vendor.id}}</td>
+            <!-- <td class="td-style">{{vendor.id}}</td> -->
             <td class="td-style">{{vendor.code}}</td>
             <td class="td-style">{{vendor.name}}</td>
             <td><a routerLink='/vendor-detail/{{vendor.id}}'>

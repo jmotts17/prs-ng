@@ -8,7 +8,7 @@
 <table class="table table-sm table-striped">
     <thead>
         <tr>
-            <th><a [ngClass]='colClasses' (click)="sortBy('id')">ID</a></th>
+            <!-- <th><a [ngClass]='colClasses' (click)="sortBy('id')">ID</a></th> -->
             <th><a [ngClass]='colClasses' (click)="sortBy('name')">Product Name</a></th>
             <th><a [ngClass]='colClasses' (click)="sortBy('vendor.name')">Vendor</a></th>
             <th><a [ngClass]='colClasses' (click)="sortBy('price')">Price</a></th>
@@ -17,7 +17,7 @@
     </thead>
     <tbody>
         <tr *ngFor='let product of products | sort: sortCriteria:sortOrder'>
-            <td class="td-style">{{product.id}}</td>
+            <!-- <td class="td-style">{{product.id}}</td> -->
             <td class="td-style">{{product.name}}</td>
             <td class="td-style">{{product.vendor.name}}</td>
             <td class="td-style">{{product.price | currency}}</td>
