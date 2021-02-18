@@ -10,10 +10,10 @@
             <span *ngIf="user">&nbsp;<a routerLink="/user-edit/{{user.id}}">Edit User</a></span>
         </section>
         <table class="table table-sm">
-            <tr>
+            <!-- <tr>
                 <td>ID</td>
                 <td>{{user.id}}</td>
-            </tr>
+            </tr> -->
             <tr>
                 <td>Username:</td>
                 <td><input [(ngModel)]="user.userName" class="rounded" type="text" disabled></td>
