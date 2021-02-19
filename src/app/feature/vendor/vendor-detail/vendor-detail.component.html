@@ -1,9 +1,9 @@
 <app-menu></app-menu>
+<section class="heading">
+    <span class="page-title font-weight-bold font-italic section-title">[{{title}}]</span>
+    <span>&nbsp;<a routerLink="/vendor-list">Return to List</a></span>
+</section>  
 <div class="component">
-    <section class="heading">
-        <span class="page-title font-weight-bold font-italic section-title">{{title}}</span>
-        <span>&nbsp;<a routerLink="/vendor-list">Return to List</a></span>
-    </section>
     <main *ngIf='vendor' class="single">
         <table class="table table-sm">
             <tr>
