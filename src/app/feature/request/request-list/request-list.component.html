@@ -16,8 +16,8 @@
             <th>Action</th>
         </tr>
     </thead>
-    <tbody *ngIf='requests'>
-        <ng-container *ngIf="isHidden; then showRequests; else createRequest"></ng-container>
+    <tbody>
+        <ng-container *ngIf="!isHidden; then showRequests; else createRequest"></ng-container>
         <ng-template #showRequests>
             <tr *ngFor='let request of requests | sort: sortCriteria:sortOrder'>
                 <!-- <td class="td-style">{{request.id}}</td> -->
