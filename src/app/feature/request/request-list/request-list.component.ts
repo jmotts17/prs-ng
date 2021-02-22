@@ -40,8 +40,13 @@ export class RequestListComponent implements OnInit {
         }
 
         // If the request array is empty, isHidden is true
+        // Else set request userName property for sorting
         if(this.requests.length === 0) {
           this.isHidden = true;
+        } else {
+          for(let request of this.requests) {
+            request.userName = request.user.userName;
+          }
         }
 
       },

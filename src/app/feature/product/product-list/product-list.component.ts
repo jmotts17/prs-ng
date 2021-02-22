@@ -32,7 +32,8 @@ export class ProductListComponent implements OnInit {
     this.productSvc.getAll().subscribe(
       resp => {
         this.products = resp as Product[];
-
+        
+        // Setting vendorName for vendor sorting
         for(let product of this.products) {
           product.vendorName = product.vendor.name;
         }

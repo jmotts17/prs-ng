@@ -11,6 +11,7 @@ export class Request {
     total: number;
     submittedDate: Date;
     reasonForRejection: string;
+    userName: string;
 
     constructor(id:number = 0, user:User = new User(), description:string = "", justification:string = "", dateNeeded:Date = new Date(),
     deliveryMode:string = "", status:string = "", total:number = 0, submittedDate:Date = new Date(), reasonForRejection:string = "") {
