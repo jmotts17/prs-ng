@@ -8,6 +8,7 @@ export class Product {
     price: number;
     unit: string;
     photoPath: string;
+    vendorName: string;
 
     constructor(id:number = 0, vendor:Vendor = null, partNumber:string ="", name:string = "", price:number = 0, unit:string = "", photoPath:string = "") {
         this.id = id;
