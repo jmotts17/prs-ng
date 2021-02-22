@@ -26,6 +26,12 @@ export class RequestReviewComponent implements OnInit {
     this.requestSvc.review(this.sysSvc.loggedInUser.id).subscribe(
       resp => {
         this.requests = resp as Request[];
+
+        // Setting userName for user sorting
+        for(let request of this.requests) {
+          request.userName = request.user.userName;
+        }
+
       },
       err => {
         console.log(err);
