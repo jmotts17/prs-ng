@@ -11,7 +11,7 @@ import { SystemService } from '../../../service/system.service';
 export class RequestListComponent implements OnInit {
   title = "PurchaseRequest List";
   requests: Request[] = [];
-  isHidden = true;
+  isHidden = false;
   sortCriteria: string = "id";
   sortOrder: string = "asc";
   colClasses = "btn btn-link font-weight-bold";
@@ -29,13 +29,6 @@ export class RequestListComponent implements OnInit {
       resp => {
         this.requests = resp as Request[];
 
-        // Set flag to false if no requests
-        for(let req of this.requests) {
-          if(req.user.id === this.sysSvc.loggedInUser.id) {
-            this.isHidden = false;
-          }
-        }
-        
         // Checks to see if the logged in user is an admin or reviewer
         // If they are neither, only show their requests
         if(!(this.sysSvc.loggedInUser.admin) && !(this.sysSvc.loggedInUser.reviewer)) { 
@@ -45,6 +38,12 @@ export class RequestListComponent implements OnInit {
             }
           }
         }
+
+        // If the request array is empty, isHidden is true
+        if(this.requests.length === 0) {
+          this.isHidden = true;
+        }
+
       },
       err => {
         console.log(err);

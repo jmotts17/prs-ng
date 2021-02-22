@@ -8,7 +8,6 @@
 <table class="table table-sm table-striped">
     <thead>
         <tr>
-            <!-- <th><a [ngClass]='colClasses' (click)="sortBy('id')">ID</a></th> -->
             <th><a [ngClass]='colClasses' (click)="sortBy('userName')">User</a></th>
             <th><a [ngClass]='colClasses' (click)="sortBy('description')">Description</a></th>
             <th><a [ngClass]='colClasses' (click)="sortBy('status')">Status</a></th>
@@ -17,32 +16,26 @@
         </tr>
     </thead>
     <tbody>
-        <ng-container *ngIf="!isHidden; then showRequests; else createRequest"></ng-container>
-        <ng-template #showRequests>
-            <tr *ngFor='let request of requests | sort: sortCriteria:sortOrder'>
-                <!-- <td class="td-style">{{request.id}}</td> -->
-                <td class="td-style">{{request.user.userName}}</td>
-                <td class="td-style">{{request.description}}</td>
-                <td class="td-style">{{request.status}}</td>
-                <td class="td-style">{{request.total | currency}}</td>
-                <td>
-                    <a routerLink='/request-detail/{{request.id}}'>
-                    <img width='20' height='20' src='assets/details.png' title='Request Details'></a>
-                    <a routerLink='/request-edit/{{request.id}}'>
-                    <img width='20' height='20' src='assets/pencil-icon.png' title='Request Edit'></a>
-                    <a routerLink='/request-lines/{{request.id}}'>
-                    <img width='20' height='20' src='assets/lines.png' title='Request Lines'></a>
-                </td>
-            </tr>
-        </ng-template>
-        <ng-template #createRequest>
-            <tr>
-                <td class="table-danger td-style">No Requests. Please create a new one!</td>
-                <td class="table-danger"></td>
-                <td class="table-danger"></td>
-                <td class="table-danger"></td>
-                <td class="table-danger"></td>
-            </tr>
-        </ng-template>
+        <tr *ngFor='let request of requests | sort: sortCriteria:sortOrder'>
+            <td class="td-style">{{request.user.userName}}</td>
+            <td class="td-style">{{request.description}}</td>
+            <td class="td-style">{{request.status}}</td>
+            <td class="td-style">{{request.total | currency}}</td>
+            <td>
+                <a routerLink='/request-detail/{{request.id}}'>
+                <img width='20' height='20' src='assets/details.png' title='Request Details'></a>
+                <a routerLink='/request-edit/{{request.id}}'>
+                <img width='20' height='20' src='assets/pencil-icon.png' title='Request Edit'></a>
+                <a routerLink='/request-lines/{{request.id}}'>
+                <img width='20' height='20' src='assets/lines.png' title='Request Lines'></a>
+            </td>
+        </tr>
+        <tr *ngIf="isHidden">
+            <td class="table-danger td-style">No Requests yet. Please create a new one!</td>
+            <td class="table-danger"></td>
+            <td class="table-danger"></td>
+            <td class="table-danger"></td>
+            <td class="table-danger"></td>
+        </tr>
     </tbody>
 </table>
